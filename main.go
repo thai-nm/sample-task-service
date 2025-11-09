@@ -35,10 +35,15 @@ func createTask(c *gin.Context) {
 	c.IndentedJSON(200, tasks)
 }
 
+func getHomepage(c *gin.Context) {
+	c.String(200, "This is Task Service.")
+}
+
 func main() {
 
 	server := gin.Default()
 
+	server.GET("/", getHomepage)
 	server.GET("/tasks", getAllTasks)
 	server.POST("/tasks", createTask)
 
