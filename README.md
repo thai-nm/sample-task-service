@@ -1,5 +1,5 @@
-# Simple Webapp Golang
-A simple Golang web application.
+# Sample app: Task Service
+A simple Golang web application for testing purposes.
 
 ## API
 | Endpoint | Type   | Usage             |
@@ -12,18 +12,33 @@ A simple Golang web application.
 ## How to start
 - Clone the repository and `cd` inside it:
   ``` bash
-  git clone https://thainmuet@github.com/thainmuet/simple-golang-webapp.git
-  cd simple-golang-webapp
+  git clone https://github.com/thai-nm/sample-task-service.git
+  cd sample-task-service
   ```
+
 - Build Golang code:
   ``` bash
   go build
   ```
 - Start server:
   ``` bash
-  ./simple-golang-webapp
+  ./sample-task-service
+  ```
+  
+## Using Docker
+You can run this application using Docker:
+
+  ```bash
+  docker run -d -p 8080:8080 --name task-service nmthai/sample-task-service
   ```
 
+Or build it yourself:
+
+  ```bash
+  docker build -t task-service .
+  docker run -d -p 8080:8080 --name task-service task-service
+  ```
+  
 ## API call examples
 
 - `POST` request:

@@ -1,4 +1,4 @@
-module github.com/thainm.uet/simple-golang-webapp
+module github.com/thai-nm/sample-task-service
 
 go 1.19
 

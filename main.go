@@ -42,5 +42,5 @@ func main() {
 	server.GET("/tasks", getAllTasks)
 	server.POST("/tasks", createTask)
 
-	server.Run("localhost:8080")
+	server.Run("0.0.0.0:8080")
 }
